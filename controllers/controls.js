@@ -1,5 +1,5 @@
 import User from "../models/User.js";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import Account from "../models/account.js";
 import Debit from "../models/debit.js";
 import Credit from "../models/credit.js";
