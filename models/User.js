@@ -28,41 +28,6 @@ const userSchema = mongoose.Schema({
         }
 
     },
-    phoneNumber: {
-        type: String,
-        required: true,
-        trim: true,
-        // length: {min: 11, max:11},
-        validate(value){
-            if(value.length == 0){
-                throw new Error ('please enter a valid Nigerian phone number')
-            }
-        }
-    },
-   
-    address : {
-        type: String,
-        required: true,
-        trim: true,
-        lowercase: true
-    },
-    city : {
-        type: String, 
-        required: true,
-        trim: true,
-        lowercase: true
-    },
-    state : {
-        type: String,
-        required: true,
-        trim: true,
-        lowercase: true
-    },
-    zipCode : {
-        type : Number,
-        required : true,
-        trim : true,
-    },
     password: {
         type: String,
         required: true,
@@ -153,12 +118,7 @@ userSchema.statics.loginUserUsingEmailAndPassword = async function (email, passw
 
 userSchema.methods.toJSON = function () { //DO NOT USE arrow function here.
     const user = this.toObject(); 
-    delete user.address;  
-    delete user.city;
-    delete user.state;
-    delete user.zipCode;
     delete user.password;
-
     return user;
 }
 
