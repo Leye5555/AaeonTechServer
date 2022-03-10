@@ -1,11 +1,13 @@
 import express from "express";
 import mongoose from "mongoose";
-import dotenv from "dotenv";
 import cors from "cors";
 import router from "./routes/Routes.js";
-dotenv.config();
+import express from "express";
+import dotenv from "dotenv";
 
 const app = express();
+if (app.get("env") !== "production") dotenv.config();
+
 const PORT = process.env.PORT || 5000;
 
 const CONNECTION_URL = process.env.CONNECTION_URL;

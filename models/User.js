@@ -2,9 +2,11 @@ import mongoose from 'mongoose';
 import validator from 'validator';
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
+import express from "express";
 import dotenv from "dotenv";
 
-dotenv.config();
+const app = express();
+if (app.get("env") !== "production") dotenv.config();
 
 const JWT_SECRET = process.env.JWT_SECRET;
 const admin_pass = process.env.admin_pass;

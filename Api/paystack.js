@@ -1,7 +1,9 @@
 import axios from "axios";
+import express from "express";
 import dotenv from "dotenv";
 
-dotenv.config();
+const app = express();
+if (app.get("env") !== "production") dotenv.config();
 
 const myPaystackSecretKey = process.env.myPaystackSecretKey;
 const paystackAPI = axios.create({
