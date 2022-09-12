@@ -34,4 +34,8 @@ A full API documentation for all endpoints can be found here:
 
 Getting started
 
-npm start
+> clone the repo : "git clone github repo link"
+
+> run command : "npm install"
+
+> app launch : "npm start"
