@@ -1,4 +1,4 @@
-![ Api docs screenshot ]("./readme_pic.png")
+![ Api docs screenshot ](./readme_pic.png)
 
 # Aaeon Tech
 
